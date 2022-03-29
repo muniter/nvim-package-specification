@@ -36,6 +36,9 @@ The Neovim package specification supports a single, top-level package metadata f
 	* `summary` (String) a short description of the package, typically less than 100 character long.
 	* `detailed` (String) a long-form description of the package, this should convey the package's principal functionality to the user without being as detailed as the package readme.
 	* `homepage` (String) This is the homepage of the package, which in most cases will be the GitHub URL.
+	* `author` (Table) information about the author of the package.
+		* `name`: author name if there are multiple one can use e. 'plugin team'
+		* `email`: author email
 	* `license` (String) This is [SPDX](https://spdx.org/licenses/) license identifier. Dual licensing is indicated via joining the relevant licenses via `/`.
 
 * `dependencies` (List[Table]) A list of tables describing the package dependencies. Each entry in the table has the following, only `source` is mandatory:
@@ -54,7 +57,8 @@ The Neovim package specification supports a single, top-level package metadata f
 
 # Example
 
-```lua
+<!-- WARN: DO NOT MODIFY, CI HANDLES IT -->
+```lua:/examples/packspec.1.lua
 package = "lspconfig"
 version = "0.1.2"
 specification_version = "0.1.0"
@@ -85,7 +89,8 @@ external_dependencies = {
 ```
 
 And in json format
-```json
+<!-- WARN: DO NOT MODIFY, CI HANDLES IT -->
+```json:/examples/packspec.1.json
 {
   "package" : "lspconfig",
   "version" : "0.1.2",
