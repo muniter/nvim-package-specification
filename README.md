@@ -60,33 +60,38 @@ The Neovim package specification supports a single, top-level package metadata f
 
 <!-- WARN: DO NOT MODIFY, CI HANDLES IT -->
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=/examples/packspec.1.lua) -->
-```lua:/examples/packspec.1.lua
+<!-- The below code snippet is automatically added from /examples/packspec.1.lua -->
+```lua
 package = "lspconfig"
 version = "0.1.2"
-specification_version = "0.1.0"
-source = "git://github.com/neovim/nvim-lspconfig.git",
+packspec = "0.1.0"
+source = "git://github.com/neovim/nvim-lspconfig.git"
 description = {
-   summary = "Quickstart configurations for the Nvim-lsp client",
-   detailed = [[
-   	lspconfig is a set of configurations for language servers for use with Neovim's built-in language server client. Lspconfig handles configuring, launching, and attaching language servers.
-   ]],
-   homepage = "git://github.com/neovim/nvim-lspconfig/", 
-   license = "Apache-2.0" 
+  summary = "Quickstart configurations for the Nvim-lsp client",
+  detailed = [[
+    lspconfig is a set of configurations for language servers for use with Neovim's built-in language server client. Lspconfig handles configuring, launching, and attaching language servers.
+  ]],
+  homepage = "git://github.com/neovim/nvim-lspconfig/",
+  license = "Apache-2.0",
+  author = {
+    name = "Neovim team",
+    email = "neovim@neovim.io",
+  }
 }
 dependencies = {
-   neovim = {
-      version = ">= 0.6.1",
-      source = "git://github.com/neovim/neovim.git"
-   },
-   gitsigns = {
-      version = "> 0.3",
-      source = "git://github.com/lewis6991/gitsigns.nvim.git"
-   }
+  neovim = {
+    version = ">= 0.6.1",
+    source = "git://github.com/neovim/neovim.git",
+  },
+  gitsigns = {
+    version = "> 0.3",
+    source = "git://github.com/lewis6991/gitsigns.nvim.git",
+  }
 }
 external_dependencies = {
-   git = {
-      version = ">= 1.6.0",
-   },
+  git = {
+    version = ">= 1.6.0",
+  },
 }
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
@@ -94,17 +99,23 @@ external_dependencies = {
 And in json format
 <!-- WARN: DO NOT MODIFY, CI HANDLES IT -->
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=/examples/packspec.1.json) -->
-```json:/examples/packspec.1.json
+<!-- The below code snippet is automatically added from /examples/packspec.1.json -->
+```json
 {
   "package" : "lspconfig",
   "version" : "0.1.2",
-  "specification_version" : "0.1.0",
+  "packspec": "0.1.0",
+  "$schema": "https://raw.githubusercontent.com/nvim-lua/nvim-package-specification/master/schema/packspec_schema.json",
   "source" : "git://github.com/neovim/nvim-lspconfig.git",
   "description" : {
     "summary" : "Quickstart configurations for the Nvim-lsp client",
     "detailed" : "lspconfig is a set of configurations for language servers for use with Neovim's built-in language server client. Lspconfig handles configuring, launching, and attaching language servers",
     "homepage" : "https://github.com/neovim/nvim-lspconfig/", 
-    "license" : "Apache-2.0" 
+    "license" : "Apache-2.0",
+    "author": {
+      "name": "Neovim team",
+      "email": "neovim@neovim.io"
+    }
   },
   "dependencies" : {
     "neovim" : {
@@ -118,8 +129,8 @@ And in json format
   },
   "external_dependencies" : {
     "git" : {
-	"version" : ">= 1.6.0",
-    },
+	"version" : ">= 1.6.0"
+    }
   }
 }
 ```
