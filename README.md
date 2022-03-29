@@ -1,6 +1,6 @@
 # The Neovim package specification 
 
-.
+..
 The neovim package specification consists of three components:
 1. Guidelines which provide guidance to package authors,
 2. the `packspec` file format, and.
