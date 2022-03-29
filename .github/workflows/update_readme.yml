@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Markdown autodocs
-      - uses: dineshsonachalam/markdown-autodocs@v1.0.4
+        uses: dineshsonachalam/markdown-autodocs@v1.0.4
         with:
           commit_message: 'docs: autoupdate examples'
           # Optional output file paths, defaults to '[./README.md]'.
